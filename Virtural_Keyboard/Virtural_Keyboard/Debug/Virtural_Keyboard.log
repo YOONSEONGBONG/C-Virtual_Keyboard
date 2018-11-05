@@ -1,0 +1,17 @@
+﻿빌드 시작: 2018-11-05 오전 10:52:40
+2 노드의 "C:\Users\feng9\documents\visual studio 2013\Projects\Virtural_Keyboard\Virtural_Keyboard\Virtural_Keyboard.vcxproj" 프로젝트(Build 대상)입니다.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Virtural_Keyboard.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Virtural_KeyboardDlg.cpp
+  Virtural_KeyboardDlg.cpp
+Link:
+  C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\feng9\documents\visual studio 2013\Projects\Virtural_Keyboard\Debug\Virtural_Keyboard.exe" /INCREMENTAL /NOLOGO imm32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\feng9\documents\visual studio 2013\Projects\Virtural_Keyboard\Debug\Virtural_Keyboard.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\feng9\documents\visual studio 2013\Projects\Virtural_Keyboard\Debug\Virtural_Keyboard.lib" /MACHINE:X86 Debug\Virtural_Keyboard.res
+  Debug\AutomataKR.obj
+  Debug\stdafx.obj
+  Debug\Virtural_Keyboard.obj
+  Debug\Virtural_KeyboardDlg.obj
+  Virtural_Keyboard.vcxproj -> C:\Users\feng9\documents\visual studio 2013\Projects\Virtural_Keyboard\Debug\Virtural_Keyboard.exe
+"C:\Users\feng9\documents\visual studio 2013\Projects\Virtural_Keyboard\Virtural_Keyboard\Virtural_Keyboard.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:01.60
