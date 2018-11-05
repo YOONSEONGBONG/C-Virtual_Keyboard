@@ -1,5 +1,5 @@
 
-// Virtural_KeyboardDlg.cpp : ±¸Çö ÆÄÀÏ
+// Virtural_KeyboardDlg.cpp : êµ¬í˜„ íŒŒì¼
 //
 
 #include "stdafx.h"
@@ -13,7 +13,7 @@
 
 const int BASE_CODE = 0xac00;
 
-// ÀÀ¿ë ÇÁ·Î±×·¥ Á¤º¸¿¡ »ç¿ëµÇ´Â CAboutDlg ´ëÈ­ »óÀÚÀÔ´Ï´Ù.
+// ì‘ìš© í”„ë¡œê·¸ë¨ ì •ë³´ì— ì‚¬ìš©ë˜ëŠ” CAboutDlg ëŒ€í™” ìƒìì…ë‹ˆë‹¤.
 
 class CAboutDlg : public CDialogEx
 {
@@ -22,13 +22,13 @@ public:
 	CAboutDlg();
 
 	
-// ´ëÈ­ »óÀÚ µ¥ÀÌÅÍÀÔ´Ï´Ù.
+// ëŒ€í™” ìƒì ë°ì´í„°ì…ë‹ˆë‹¤.
 	enum { IDD = IDD_ABOUTBOX };
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Áö¿øÀÔ´Ï´Ù.
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ì§€ì›ì…ë‹ˆë‹¤.
 
-// ±¸ÇöÀÔ´Ï´Ù.
+// êµ¬í˜„ì…ë‹ˆë‹¤.
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -46,7 +46,7 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CVirtural_KeyboardDlg ´ëÈ­ »óÀÚ
+// CVirtural_KeyboardDlg ëŒ€í™” ìƒì
 
 
 
@@ -195,15 +195,15 @@ BEGIN_MESSAGE_MAP(CVirtural_KeyboardDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CVirtural_KeyboardDlg ¸Ş½ÃÁö Ã³¸®±â
+// CVirtural_KeyboardDlg ë©”ì‹œì§€ ì²˜ë¦¬ê¸°
 
 BOOL CVirtural_KeyboardDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	// ½Ã½ºÅÛ ¸Ş´º¿¡ "Á¤º¸..." ¸Ş´º Ç×¸ñÀ» Ãß°¡ÇÕ´Ï´Ù.
+	// ì‹œìŠ¤í…œ ë©”ë‰´ì— "ì •ë³´..." ë©”ë‰´ í•­ëª©ì„ ì¶”ê°€í•©ë‹ˆë‹¤.
 
-	// IDM_ABOUTBOX´Â ½Ã½ºÅÛ ¸í·É ¹üÀ§¿¡ ÀÖ¾î¾ß ÇÕ´Ï´Ù.
+	// IDM_ABOUTBOXëŠ” ì‹œìŠ¤í…œ ëª…ë ¹ ë²”ìœ„ì— ìˆì–´ì•¼ í•©ë‹ˆë‹¤.
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
@@ -221,14 +221,14 @@ BOOL CVirtural_KeyboardDlg::OnInitDialog()
 		}
 	}
 
-	// ÀÌ ´ëÈ­ »óÀÚÀÇ ¾ÆÀÌÄÜÀ» ¼³Á¤ÇÕ´Ï´Ù.  ÀÀ¿ë ÇÁ·Î±×·¥ÀÇ ÁÖ Ã¢ÀÌ ´ëÈ­ »óÀÚ°¡ ¾Æ´Ò °æ¿ì¿¡´Â
-	//  ÇÁ·¹ÀÓ¿öÅ©°¡ ÀÌ ÀÛ¾÷À» ÀÚµ¿À¸·Î ¼öÇàÇÕ´Ï´Ù.
-	SetIcon(m_hIcon, TRUE);			// Å« ¾ÆÀÌÄÜÀ» ¼³Á¤ÇÕ´Ï´Ù.
-	SetIcon(m_hIcon, FALSE);		// ÀÛÀº ¾ÆÀÌÄÜÀ» ¼³Á¤ÇÕ´Ï´Ù.
+	// ì´ ëŒ€í™” ìƒìì˜ ì•„ì´ì½˜ì„ ì„¤ì •í•©ë‹ˆë‹¤.  ì‘ìš© í”„ë¡œê·¸ë¨ì˜ ì£¼ ì°½ì´ ëŒ€í™” ìƒìê°€ ì•„ë‹ ê²½ìš°ì—ëŠ”
+	//  í”„ë ˆì„ì›Œí¬ê°€ ì´ ì‘ì—…ì„ ìë™ìœ¼ë¡œ ìˆ˜í–‰í•©ë‹ˆë‹¤.
+	SetIcon(m_hIcon, TRUE);			// í° ì•„ì´ì½˜ì„ ì„¤ì •í•©ë‹ˆë‹¤.
+	SetIcon(m_hIcon, FALSE);		// ì‘ì€ ì•„ì´ì½˜ì„ ì„¤ì •í•©ë‹ˆë‹¤.
 
-	// TODO: ¿©±â¿¡ Ãß°¡ ÃÊ±âÈ­ ÀÛ¾÷À» Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì¶”ê°€ ì´ˆê¸°í™” ì‘ì—…ì„ ì¶”ê°€í•©ë‹ˆë‹¤.
 
-	return TRUE;  // Æ÷Ä¿½º¸¦ ÄÁÆ®·Ñ¿¡ ¼³Á¤ÇÏÁö ¾ÊÀ¸¸é TRUE¸¦ ¹İÈ¯ÇÕ´Ï´Ù.
+	return TRUE;  // í¬ì»¤ìŠ¤ë¥¼ ì»¨íŠ¸ë¡¤ì— ì„¤ì •í•˜ì§€ ì•Šìœ¼ë©´ TRUEë¥¼ ë°˜í™˜í•©ë‹ˆë‹¤.
 }
 
 void CVirtural_KeyboardDlg::OnSysCommand(UINT nID, LPARAM lParam)
@@ -244,19 +244,19 @@ void CVirtural_KeyboardDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 }
 
-// ´ëÈ­ »óÀÚ¿¡ ÃÖ¼ÒÈ­ ´ÜÃß¸¦ Ãß°¡ÇÒ °æ¿ì ¾ÆÀÌÄÜÀ» ±×¸®·Á¸é
-//  ¾Æ·¡ ÄÚµå°¡ ÇÊ¿äÇÕ´Ï´Ù.  ¹®¼­/ºä ¸ğµ¨À» »ç¿ëÇÏ´Â MFC ÀÀ¿ë ÇÁ·Î±×·¥ÀÇ °æ¿ì¿¡´Â
-//  ÇÁ·¹ÀÓ¿öÅ©¿¡¼­ ÀÌ ÀÛ¾÷À» ÀÚµ¿À¸·Î ¼öÇàÇÕ´Ï´Ù.
+// ëŒ€í™” ìƒìì— ìµœì†Œí™” ë‹¨ì¶”ë¥¼ ì¶”ê°€í•  ê²½ìš° ì•„ì´ì½˜ì„ ê·¸ë¦¬ë ¤ë©´
+//  ì•„ë˜ ì½”ë“œê°€ í•„ìš”í•©ë‹ˆë‹¤.  ë¬¸ì„œ/ë·° ëª¨ë¸ì„ ì‚¬ìš©í•˜ëŠ” MFC ì‘ìš© í”„ë¡œê·¸ë¨ì˜ ê²½ìš°ì—ëŠ”
+//  í”„ë ˆì„ì›Œí¬ì—ì„œ ì´ ì‘ì—…ì„ ìë™ìœ¼ë¡œ ìˆ˜í–‰í•©ë‹ˆë‹¤.
 
 void CVirtural_KeyboardDlg::OnPaint()
 {
 	if (IsIconic())
 	{
-		CPaintDC dc(this); // ±×¸®±â¸¦ À§ÇÑ µğ¹ÙÀÌ½º ÄÁÅØ½ºÆ®ÀÔ´Ï´Ù.
+		CPaintDC dc(this); // ê·¸ë¦¬ê¸°ë¥¼ ìœ„í•œ ë””ë°”ì´ìŠ¤ ì»¨í…ìŠ¤íŠ¸ì…ë‹ˆë‹¤.
 
 		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
 
-		// Å¬¶óÀÌ¾ğÆ® »ç°¢Çü¿¡¼­ ¾ÆÀÌÄÜÀ» °¡¿îµ¥¿¡ ¸ÂÃä´Ï´Ù.
+		// í´ë¼ì´ì–¸íŠ¸ ì‚¬ê°í˜•ì—ì„œ ì•„ì´ì½˜ì„ ê°€ìš´ë°ì— ë§ì¶¥ë‹ˆë‹¤.
 		int cxIcon = GetSystemMetrics(SM_CXICON);
 		int cyIcon = GetSystemMetrics(SM_CYICON);
 		CRect rect;
@@ -264,7 +264,7 @@ void CVirtural_KeyboardDlg::OnPaint()
 		int x = (rect.Width() - cxIcon + 1) / 2;
 		int y = (rect.Height() - cyIcon + 1) / 2;
 
-		// ¾ÆÀÌÄÜÀ» ±×¸³´Ï´Ù.
+		// ì•„ì´ì½˜ì„ ê·¸ë¦½ë‹ˆë‹¤.
 		dc.DrawIcon(x, y, m_hIcon);
 	}
 	else
@@ -273,8 +273,8 @@ void CVirtural_KeyboardDlg::OnPaint()
 	}
 }
 
-// »ç¿ëÀÚ°¡ ÃÖ¼ÒÈ­µÈ Ã¢À» ²ô´Â µ¿¾È¿¡ Ä¿¼­°¡ Ç¥½ÃµÇµµ·Ï ½Ã½ºÅÛ¿¡¼­
-//  ÀÌ ÇÔ¼ö¸¦ È£ÃâÇÕ´Ï´Ù.
+// ì‚¬ìš©ìê°€ ìµœì†Œí™”ëœ ì°½ì„ ë„ëŠ” ë™ì•ˆì— ì»¤ì„œê°€ í‘œì‹œë˜ë„ë¡ ì‹œìŠ¤í…œì—ì„œ
+//  ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•©ë‹ˆë‹¤.
 HCURSOR CVirtural_KeyboardDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
@@ -283,7 +283,7 @@ HCURSOR CVirtural_KeyboardDlg::OnQueryDragIcon()
 
 void CVirtural_KeyboardDlg::AppendText(int nCode)
 {
-	// ¹®ÀÚ¿­ ÀÔ·Â
+	// ë¬¸ìì—´ ì…ë ¥
 	m_automataKr.SetKeyCode(nCode);
 
 	CString strText = m_automataKr.completeText;
@@ -295,7 +295,7 @@ void CVirtural_KeyboardDlg::AppendText(int nCode)
 	
 	SetDlgItemText(IDC_EDIT1, strText);
 
-	// Edit Focus Ã³¸®
+	// Edit Focus ì²˜ë¦¬
 	CEdit * pEdit = ((CEdit*)GetDlgItem(IDC_EDIT1));
 	pEdit->SetSel(pEdit->GetWindowTextLength(), pEdit->GetWindowTextLength());
 	pEdit->SetFocus();
@@ -317,21 +317,21 @@ void CVirtural_KeyboardDlg::signChange(bool check)
 	{
 		if (check == true)
 		{
-			btn_w.SetWindowText(L"¤¹");		btn_e.SetWindowText(L"¤¨");			btn_r.SetWindowText(L"¤¢");
-			btn_t.SetWindowText(L"¤¶");		btn_o.SetWindowText(L"¤Â");			btn_p.SetWindowText(L"¤Æ");
-			btn_q.SetWindowText(L"¤³");
+			btn_w.SetWindowText(L"ã…‰");		btn_e.SetWindowText(L"ã„¸");			btn_r.SetWindowText(L"ã„²");
+			btn_t.SetWindowText(L"ã…†");		btn_o.SetWindowText(L"ã…’");			btn_p.SetWindowText(L"ã…–");
+			btn_q.SetWindowText(L"ã…ƒ");
 		}
 		else
 		{
-			btn_w.SetWindowText(L"¤¸");		btn_e.SetWindowText(L"¤§");			btn_r.SetWindowText(L"¤¡");
-			btn_t.SetWindowText(L"¤µ");		btn_y.SetWindowText(L"¤Ë");			btn_u.SetWindowText(L"¤Å");
-			btn_i.SetWindowText(L"¤Á");		btn_o.SetWindowText(L"¤À");			btn_p.SetWindowText(L"¤Ä");
-			btn_a.SetWindowText(L"¤±");		btn_s.SetWindowText(L"¤¤");			btn_d.SetWindowText(L"¤·");
-			btn_g.SetWindowText(L"¤¾");		btn_h.SetWindowText(L"¤Ç");			btn_j.SetWindowText(L"¤Ã");
-			btn_k.SetWindowText(L"¤¿");		btn_l.SetWindowText(L"¤Ó");			btn_f.SetWindowText(L"¤©");
-			btn_z.SetWindowText(L"¤»");		btn_x.SetWindowText(L"¤¼");			btn_n.SetWindowText(L"¤Ì");
-			btn_c.SetWindowText(L"¤º");		btn_v.SetWindowText(L"¤½");			btn_b.SetWindowText(L"¤Ğ");
-			btn_m.SetWindowText(L"¤Ñ");		btn_q.SetWindowText(L"¤²");
+			btn_w.SetWindowText(L"ã…ˆ");		btn_e.SetWindowText(L"ã„·");			btn_r.SetWindowText(L"ã„±");
+			btn_t.SetWindowText(L"ã……");		btn_y.SetWindowText(L"ã…›");			btn_u.SetWindowText(L"ã…•");
+			btn_i.SetWindowText(L"ã…‘");		btn_o.SetWindowText(L"ã…");			btn_p.SetWindowText(L"ã…”");
+			btn_a.SetWindowText(L"ã…");		btn_s.SetWindowText(L"ã„´");			btn_d.SetWindowText(L"ã…‡");
+			btn_g.SetWindowText(L"ã…");		btn_h.SetWindowText(L"ã…—");			btn_j.SetWindowText(L"ã…“");
+			btn_k.SetWindowText(L"ã…");		btn_l.SetWindowText(L"ã…£");			btn_f.SetWindowText(L"ã„¹");
+			btn_z.SetWindowText(L"ã…‹");		btn_x.SetWindowText(L"ã…Œ");			btn_n.SetWindowText(L"ã…œ");
+			btn_c.SetWindowText(L"ã…Š");		btn_v.SetWindowText(L"ã…");			btn_b.SetWindowText(L"ã… ");
+			btn_m.SetWindowText(L"ã…¡");		btn_q.SetWindowText(L"ã…‚");
 		}
 	}
 	else
@@ -416,79 +416,79 @@ void CVirtural_KeyboardDlg::OnBnClickedCheckShift()
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonEsc()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF1()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF2()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF3()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF4()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF5()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF6()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF7()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF8()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF9()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF10()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF11()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonF12()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
@@ -613,7 +613,7 @@ void CVirtural_KeyboardDlg::OnBnClickedButtonBackspace()
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonTab()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
@@ -915,7 +915,7 @@ void CVirtural_KeyboardDlg::OnBnClickedButtonCtrl()
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonAlt()
 {
-	// TODO: ¿©±â¿¡ ÄÁÆ®·Ñ ¾Ë¸² Ã³¸®±â ÄÚµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
+	// TODO: ì—¬ê¸°ì— ì»¨íŠ¸ë¡¤ ì•Œë¦¼ ì²˜ë¦¬ê¸° ì½”ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 }
 
 
@@ -935,7 +935,16 @@ void CVirtural_KeyboardDlg::OnBnClickedButtonToggleIme()
 	{
 		is_ko = true;
 	}
-	signChange(false);
+	if (is_check_caps.GetCheck() == 1)
+	{
+		signChange(true);
+	}
+	else
+	{
+		signChange(false);
+	}
+	is_check_shift.SetCheck(0);
+	OnBnClickedCheckShift();
 }
 
 
