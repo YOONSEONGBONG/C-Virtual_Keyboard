@@ -299,6 +299,9 @@ void CVirtural_KeyboardDlg::AppendText(int nCode)
 	CEdit * pEdit = ((CEdit*)GetDlgItem(IDC_EDIT1));
 	pEdit->SetSel(pEdit->GetWindowTextLength(), pEdit->GetWindowTextLength());
 	pEdit->SetFocus();
+	//버튼 클릭시 shift해제
+	is_check_shift.SetCheck(0);
+	OnBnClickedCheckShift();
 }
 //void CVirtural_KeyboardDlg::addDigit(CString digit)
 //{
@@ -402,16 +405,8 @@ void CVirtural_KeyboardDlg::OnBnClickedCheckShift()
 			btn_dot.SetWindowText(L".");	btn_slush.SetWindowText(L"/");		btn_preb.SetWindowText(L"[");
 			btn_postb.SetWindowText(L"]");	btn_upper.SetWindowText(L"'");		btn_semi.SetWindowText(L";");	
 		}
-	
-		if (is_check_shift.GetCheck() == 1)
-		{
-			signChange(true);
-		}
-		else
-		{
-			signChange(false);
-		}
-	
+		//Cap state 체크 확인
+		OnBnClickedCheckCapstate();
 }
 
 void CVirtural_KeyboardDlg::OnBnClickedButtonEsc()
@@ -935,14 +930,8 @@ void CVirtural_KeyboardDlg::OnBnClickedButtonToggleIme()
 	{
 		is_ko = true;
 	}
-	if (is_check_caps.GetCheck() == 1)
-	{
-		signChange(true);
-	}
-	else
-	{
-		signChange(false);
-	}
+	//한/영 변환 후 CAP STATE체크 기억하고, SHIFT 체크해제
+	OnBnClickedCheckCapstate();
 	is_check_shift.SetCheck(0);
 	OnBnClickedCheckShift();
 }
